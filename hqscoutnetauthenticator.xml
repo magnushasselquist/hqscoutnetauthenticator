@@ -33,4 +33,7 @@
         </fieldset>
       </fields>
     </config>
+    <updateservers>
+      <server type="extension" priority="2" name="HQ Scoutnet Authenticator"> https://raw.githubusercontent.com/magnushasselquist/hqscoutnetauthenticator/master/updates.xml</server>
+    </updateservers>    
 </extension>
