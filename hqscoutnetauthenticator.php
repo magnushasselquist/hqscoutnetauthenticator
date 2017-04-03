@@ -60,7 +60,7 @@ class plgAuthenticationhqscoutnetauthenticator extends JPlugin
 			if ($authResult <>"") {
 				$authResultObj=json_decode($authResult);	
 				// var_dump($authResultObj); //DEBUG
-				if isset($authResultObj->member->member_no) { //login success
+				if (isset($authResultObj->member->member_no)) { //login success
 					// echo $authResultObj->token;	//DEBUG
 					// echo "Välkommen ".$authResultObj->member->first_name ." ".$authResultObj->member->last_name."!"; //DEBUG
 					error_log("HQ Login TRUE for: ".$credentials['username'], 0);
@@ -77,7 +77,7 @@ class plgAuthenticationhqscoutnetauthenticator extends JPlugin
 					$response->username = $userLoggedIn->username;
 					$response->type = "hqscoutnetauthenticator";		        
 					$response->status = JAuthentication::STATUS_SUCCESS;
-				} else if isset($authResultObj->err) { //login failure
+				} else if (isset($authResultObj->err)) { //login failure
 					$response->status = JAuthentication::STATUS_FAILURE;
 					$response->error_message = 'Felaktigt användarnamn ('.$credentials['username'].') eller lösenord. Kontrollera uppgifterna och försök igen.';
 						error_log("HQ Login FALSE for ".$username, 0);
