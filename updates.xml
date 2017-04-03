@@ -4,7 +4,7 @@
     <description>HQ Scoutnet Authenticator</description>
     <element>hqscoutnetauthenticator</element>
     <type>component</type>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <infourl title="Release notes">https://github.com/magnushasselquist/hqscoutnetauthenticator</infourl>
     <downloads>
         <downloadurl type="full" format="zip">https://github.com/magnushasselquist/hqscoutnetauthenticator/zipball/master</downloadurl>
