@@ -2,12 +2,12 @@
 <extension version="3.1" type="plugin" group="authentication" method="upgrade">
     <name>Authentication - HQ Scoutnet Authenticator</name>
     <author>Magnus Hasselquist</author>
-    <creationDate>2017-03-31</creationDate>
+    <creationDate>2017-04-03</creationDate>
     <copyright>(C) 2017 Magnus Hasselquist. All rights reserved.</copyright>
     <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
     <authorEmail>magnus.hasselquist@gmail.com</authorEmail>
     <authorUrl>https://github.com/magnushasselquist</authorUrl>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <description>Authentication - HQ Scoutnet Authenticator</description>
     <files>
         <filename plugin="hqscoutnetauthenticator">hqscoutnetauthenticator.php</filename>
