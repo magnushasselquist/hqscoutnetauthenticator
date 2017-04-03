@@ -7,7 +7,7 @@
     <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
     <authorEmail>magnus.hasselquist@gmail.com</authorEmail>
     <authorUrl>https://github.com/magnushasselquist</authorUrl>
-    <version>1.4.0</version>
+    <version>1.4.1</version>
     <description>Authentication - HQ Scoutnet Authenticator</description>
     <files>
         <filename plugin="hqscoutnetauthenticator">hqscoutnetauthenticator.php</filename>
