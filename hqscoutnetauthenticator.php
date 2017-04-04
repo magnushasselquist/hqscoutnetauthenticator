@@ -54,8 +54,22 @@ class plgAuthenticationhqscoutnetauthenticator extends JPlugin
 	        error_log("HQ: Username or email does not exist in Joomla. Aborting login.", 0);
 
 	    } else { // username eller email finns i joomla -> testa inloggning mot scoutnet..
-			$authUrl = $this->params->get('loginUrl')."?".$this->params->get('usernameParameterName')."=".$credentials['username']."&".$this->params->get('passwordParameterName')."=".$credentials['password'];
-			$authResult = file_get_contents($authUrl);
+			$authUrl = $this->params->get('loginUrl');
+			$postdata = http_build_query(
+			    array(
+				$this->params->get('usernameParameterName') => $credentials['username'],
+				$this->params->get('passwordParameterName') => $credentials['password']
+			    )
+			);
+			$opts = array('http' =>
+			    array(
+				'method'  => 'POST',
+				'header'  => 'Content-type: application/x-www-form-urlencoded',
+				'content' => $postdata
+			    )
+			);
+			$context  = stream_context_create($opts);
+			$authResult = file_get_contents($authUrl, false, $context);			
 
 			if ($authResult <>"") {
 				$authResultObj=json_decode($authResult);	
